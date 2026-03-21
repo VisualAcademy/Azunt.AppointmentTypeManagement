@@ -5,27 +5,34 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
-        <!-- 버전 정보 -->
+        <!-- Version info -->
         <VersionPrefix>1.0.0</VersionPrefix>
         <VersionSuffix></VersionSuffix>
 
-        <!-- NuGet 기본 정보 -->
+        <!-- NuGet metadata -->
         <Title>Azunt.AppointmentTypeManagement</Title>
-        <Description>Azunt.AppointmentTypeManagement is a reusable .NET module for managing appointmentTypes in multi-tenant systems. It supports SQL Server and is designed for extensibility with EF Core, Dapper, and ADO.NET.</Description>
-        <PackageTags>Azunt, appointmentType, content, multi-tenant, EFCore, Dapper, ADO.NET, Blazor, SQLServer</PackageTags>
+        <Description>Azunt.AppointmentTypeManagement is a reusable .NET module for managing appointment type entities in multi-tenant systems. It provides flexible integration with Blazor, EF Core, Dapper, and ADO.NET, and is optimized for SQL Server-based enterprise applications.</Description>
+        <PackageTags>Azunt, appointment-type, scheduling, HR, multi-tenant, EFCore, Dapper, ADO.NET, Blazor, SQLServer</PackageTags>
 
         <Authors>VisualAcademy</Authors>
         <Company>Hawaso</Company>
 
-        <!-- NuGet 링크 및 저장소 -->
+        <!-- NuGet links & repository -->
         <PackageProjectUrl>https://github.com/VisualAcademy/Azunt.AppointmentTypeManagement</PackageProjectUrl>
         <RepositoryUrl>https://github.com/VisualAcademy/Azunt.AppointmentTypeManagement</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
 
-        <!-- 저작권 정보 -->
-        <Copyright>© 2025 Hawaso. All rights reserved.</Copyright>
-    </PropertyGroup>
+        <!-- Copyright -->
+        <Copyright>© 2026 Hawaso. All rights reserved.</Copyright>
 
+        <!-- README & License for NuGet -->
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+        <!-- Additional packaging options -->
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Azunt" Version="1.2.2" />
@@ -34,4 +41,11 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
         <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
     </ItemGroup>
+
+    <!-- Include solution-root README and LICENSE in the NuGet package -->
+    <ItemGroup>
+        <None Include="..\..\..\README.md" Pack="true" PackagePath="" />
+        <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
+
 </Project>
