@@ -8,5 +8,6 @@ CREATE TABLE [dbo].[AppointmentsTypes]
     [Id] BIGINT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     [AppointmentTypeName] NVARCHAR(50) NOT NULL,
     [IsActive] BIT NOT NULL CONSTRAINT [DF_AppointmentsTypes_IsActive] DEFAULT ((1)),
-    [DateCreated] DATETIME NOT NULL CONSTRAINT [DF_AppointmentsTypes_DateCreated] DEFAULT (GETDATE())
+    [DateCreated] DATETIME NOT NULL CONSTRAINT [DF_AppointmentsTypes_DateCreated] DEFAULT (GETDATE()),
+    [TenantId] BIGINT NULL
 );
